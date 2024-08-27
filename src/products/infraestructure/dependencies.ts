@@ -8,6 +8,7 @@ import { CompareTwoTablets } from '../application/tablets/CompareTwoTablets';
 import { CompareTwoComputers } from '../application/computadoras/CompareTwoComputers';
 import { CompareTwoPhones } from '../application/telefonos/CompareTwoPhones';
 import { CompareTwoHeadphones } from '../application/audifonos/CompareTwoHeadphones';
+import { SearchProducts } from '../application/common/SearchProducts';
 
 const productRepository = new ProductRepositoryMongoose();
 
@@ -21,6 +22,8 @@ const compareTwoComputers = new CompareTwoComputers(productRepository);
 const compareTwoPhones = new CompareTwoPhones(productRepository);
 const compareTwoHeadphones = new CompareTwoHeadphones(productRepository);
 
+const searchProducts = new SearchProducts(productRepository);
+
 export default {
     getAllTablets,
     getAllComputers,
@@ -30,4 +33,5 @@ export default {
     compareTwoComputers,
     compareTwoPhones,
     compareTwoHeadphones,
+    searchProducts,
 };

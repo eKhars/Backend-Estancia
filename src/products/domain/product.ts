@@ -7,5 +7,6 @@ export interface Product {
     calificacion: number;
     imagen: string;
     redireccion: string;
+    plataforma: string;
   }
   
